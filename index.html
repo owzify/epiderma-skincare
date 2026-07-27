@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Epidermcare Skin Clinic - Dr. Pooja Shrivastava | Dermatologist in Goregaon West, Mumbai</title>
+<meta name="description" content="Dermatologist in Goregaon West, Mumbai. Dr. Pooja Shrivastava, MBBS, MD (DVL) treats acne, pigmentation, hair fall and skin allergies. Rated 4.9 by 135 patients. Book on WhatsApp.">
+<!--
+  EPIDERMCARE SKIN CLINIC - DEMO BUILD
+  Names, phone, address, rating and review text are REAL (Google listing,
+  Practo profile, clinic Instagram bio).
+  STILL TO CONFIRM WITH DR. POOJA (marked CONFIRM below):
+   - Exact clinic hours (Google says opens 10am; Practo lists 11am-9pm)
+   - Consultation fee (Practo lists Rs.800)
+   - Whether the treatment list is complete
+   - Swap the 3 stock images for real clinic + doctor photos
+-->
+<style>
+  :root{
+    --ink:#2C2C2B;--ink-soft:#7D7A75;--canvas:#FFFFFF;--surface:#F9F8F7;
+    --surface-2:#F0EFED;--line:#E6E5E3;--wa:#1FA855;--gutter:48px;--max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--canvas);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+  .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:650;letter-spacing:-.02em;font-size:16px}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--ink);flex:0 0 auto}
+  .nav-links{display:flex;gap:30px;font-size:14px;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:11px 18px;border-radius:8px;font-size:14px;font-weight:550;min-height:44px}
+  .nav-cta:hover{background:#000}
+  .nav-cta svg{width:16px;height:16px;fill:#fff}
+  .burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:8px;background:none;cursor:pointer}
+  .burger span{display:block;width:18px;height:1.5px;background:var(--ink);position:relative}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--ink)}
+  .burger span::before{top:-6px}.burger span::after{top:6px}
+  #mobileNav{display:none;border-top:1px solid var(--line);padding:8px 0 20px}
+  #mobileNav a{display:block;padding:14px 0;font-size:17px;border-bottom:1px solid var(--line)}
+  #mobileNav a:last-child{border-bottom:none}
+
+  .hero{padding:96px 0 72px;position:relative}
+  h1{font-size:clamp(2.7rem,7.6vw,6.6rem);line-height:.94;letter-spacing:-.045em;font-weight:600;max-width:15ch}
+  h1 .chip{display:inline-block;vertical-align:middle;width:clamp(90px,13vw,190px);height:clamp(46px,6.4vw,92px);border-radius:6px;overflow:hidden;margin:0 .12em;background:var(--surface-2);transform:translateY(-.06em)}
+  h1 .chip img{width:100%;height:100%;object-fit:cover;object-position:42% 38%}
+  h1 .muted{color:#BFBCB7}
+  .hero-foot{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end;justify-content:space-between;margin-top:56px}
+  .hero-foot p{max-width:44ch;color:var(--ink-soft);font-size:17px}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 24px;border-radius:8px;font-size:15px;font-weight:550;min-height:48px;border:1px solid transparent;cursor:pointer;transition:background .15s ease,border-color .15s ease}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:#188A46}
+  .btn-wa svg{width:18px;height:18px;fill:#fff}
+  .btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-dark{background:var(--ink);color:#fff;width:100%}
+  .btn-dark:hover{background:#000}
+  .side-label{position:absolute;right:14px;top:52%;writing-mode:vertical-rl;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#C6C3BE;font-weight:600}
+
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:34px 28px;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:none;padding-left:0}
+  .stat b{display:block;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.035em;font-weight:600;line-height:1}
+  .stat span{display:block;margin-top:9px;font-size:13px;color:var(--ink-soft)}
+
+  section{padding:104px 0}
+  .sec-head{margin-bottom:56px;max-width:62ch}
+  h2{font-size:clamp(1.85rem,4.1vw,3.1rem);line-height:1.04;letter-spacing:-.035em;font-weight:600;margin-top:16px}
+  .sec-head p{margin-top:20px;color:var(--ink-soft);font-size:17px;max-width:52ch}
+
+  .treat{border-top:1px solid var(--line)}
+  .treat-row{display:grid;grid-template-columns:70px 1.05fr 1.5fr;gap:32px;align-items:start;padding:30px 0;border-bottom:1px solid var(--line)}
+  .treat-row .num{font-size:12px;color:#BFBCB7;font-weight:600;padding-top:6px;letter-spacing:.06em}
+  .treat-row h3{font-size:22px;letter-spacing:-.025em;font-weight:600;line-height:1.2}
+  .treat-row p{color:var(--ink-soft);font-size:15.5px}
+
+  .bleed{padding:0}
+  .bleed figure{position:relative;overflow:hidden;border-radius:12px}
+  .bleed img{width:100%;height:clamp(280px,46vw,560px);object-fit:cover}
+  .bleed figcaption{margin-top:16px;font-size:13px;color:var(--ink-soft)}
+
+  .doc{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .doc-img{background:var(--surface);border-radius:12px;overflow:hidden}
+  .doc-img img{width:100%;height:clamp(300px,40vw,470px);object-fit:cover}
+  .cred{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+  .cred li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--ink-soft);list-style:none}
+  .cred svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px;stroke:var(--ink);fill:none;stroke-width:1.7}
+
+  .steps{background:var(--surface)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border-radius:12px;overflow:hidden}
+  .step{background:var(--surface);padding:40px 32px}
+  .step b{display:block;font-size:12px;color:var(--ink-soft);letter-spacing:.14em;font-weight:600}
+  .step h3{margin:22px 0 12px;font-size:20px;letter-spacing:-.02em;font-weight:600}
+  .step p{color:var(--ink-soft);font-size:15.5px}
+
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rev{border:1px solid var(--line);border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:18px}
+  .stars{display:flex;gap:3px}
+  .stars svg{width:14px;height:14px;fill:#D5803B}
+  .rev p{font-size:15.5px;flex:1}
+  .rev cite{font-style:normal;font-size:13px;color:var(--ink-soft)}
+  .rev-score{background:var(--surface);border-color:transparent;align-items:center;text-align:center;gap:12px;justify-content:center}
+  .rev-score b{font-size:3.4rem;letter-spacing:-.04em;font-weight:600;line-height:1}
+  .rev-score span{font-size:14px;color:var(--ink-soft)}
+  .rev-score a{font-size:14px;font-weight:550;text-decoration:underline;text-underline-offset:3px}
+
+  .book{background:var(--ink);color:#fff}
+  .book h2{color:#fff}
+  .book .eyebrow{color:rgba(255,255,255,.55)}
+  .book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:start}
+  .book-copy p{color:rgba(255,255,255,.65);font-size:17px;margin-top:20px;max-width:40ch}
+  .book-meta{margin-top:40px;display:flex;flex-direction:column;gap:18px}
+  .book-meta div{border-top:1px solid rgba(255,255,255,.16);padding-top:16px}
+  .book-meta b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;margin-bottom:6px}
+  .book-meta span{font-size:15.5px;color:#fff}
+  .book-meta a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  form{background:#fff;border-radius:12px;padding:34px}
+  .f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+  input,select,textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:#fff;min-height:48px}
+  textarea{min-height:88px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+  .hint{font-size:13px;color:var(--ink-soft);margin-top:14px;text-align:center}
+
+  details{border-bottom:1px solid var(--line)}
+  details summary{cursor:pointer;list-style:none;padding:24px 0;font-size:17.5px;font-weight:550;letter-spacing:-.015em;display:flex;justify-content:space-between;gap:20px;align-items:center}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";font-size:22px;color:var(--ink-soft);font-weight:400;flex:0 0 auto}
+  details[open] summary::after{content:"-"}
+  details p{padding:0 0 24px;color:var(--ink-soft);font-size:15.5px;max-width:70ch}
+
+  footer{border-top:1px solid var(--line);padding:72px 0 40px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px}
+  .foot-grid h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:18px}
+  .foot-grid p,.foot-grid a{font-size:15px;color:var(--ink);display:block;margin-bottom:9px}
+  .foot-grid a:hover{color:var(--ink-soft)}
+  .foot-grid p.foot-brand{font-size:clamp(1.4rem,3.1vw,2.1rem);letter-spacing:-.04em;font-weight:600;line-height:1.05;max-width:20ch;margin-bottom:0}
+  .foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:13px;color:var(--ink-soft)}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.16)}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
+
+  @media (max-width:1000px){
+    :root{--gutter:24px}
+    .doc,.book-grid{grid-template-columns:1fr;gap:44px}
+    .steps-grid,.rev-grid{grid-template-columns:1fr}
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat{border-left:none;border-top:1px solid var(--line);padding:26px 0}
+    .stat:nth-child(-n+2){border-top:none}
+    .stat:nth-child(2n){padding-left:24px;border-left:1px solid var(--line)}
+    .nav-links{display:none}
+    .nav-cta{display:none}
+    .burger{display:flex}
+    .side-label{display:none}
+    section{padding:72px 0}
+    .hero{padding:64px 0 56px}
+    .treat-row{grid-template-columns:36px 1fr;gap:16px}
+    .treat-row p{grid-column:2}
+    .foot-grid{grid-template-columns:1fr;gap:36px}
+    .f-row{grid-template-columns:1fr;gap:0}
+    form{padding:24px}
+    .rev-score{padding:36px 30px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="#top"><span class="dot"></span> Epidermcare</a>
+      <div class="nav-links">
+        <a href="#treatments">Treatments</a>
+        <a href="#doctor">Dr. Pooja</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-cta" href="#book">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1a11.6 11.6 0 0 1-4.6-3.2 9 9 0 0 1-1.8-3c-.2-.6 0-1.2.3-1.6l.6-.7c.2-.2.5-.2.7.1l1 1.7c.1.3.1.5 0 .7l-.4.5c-.2.2-.2.4 0 .7a8 8 0 0 0 3.2 2.7c.3.1.5.1.7-.1l.5-.6c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.4.4.6Z"/></svg>
+        Book on WhatsApp
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+    <div id="mobileNav">
+      <a href="#treatments">Treatments</a>
+      <a href="#doctor">Dr. Pooja</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book">Book on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <span class="side-label">Goregaon West &middot; Mumbai</span>
+    <div class="wrap">
+      <p class="eyebrow">Epidermcare Skin Clinic &amp; Wellness Centre</p>
+      <h1 style="margin-top:28px">
+        Skin that feels
+        <span class="chip"><img src="img/hero.jpeg" alt="Close-up of calm, healthy skin"></span>
+        like <span class="muted">you</span> again
+      </h1>
+      <div class="hero-foot">
+        <p>Medical dermatology and aesthetic care in Goregaon West &mdash; led by Dr. Pooja Shrivastava, MBBS, MD (Dermatology, Venereology &amp; Leprosy).</p>
+        <div class="btn-row">
+          <a class="btn btn-wa" href="#book">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1a11.6 11.6 0 0 1-4.6-3.2 9 9 0 0 1-1.8-3c-.2-.6 0-1.2.3-1.6l.6-.7c.2-.2.5-.2.7.1l1 1.7c.1.3.1.5 0 .7l-.4.5c-.2.2-.2.4 0 .7a8 8 0 0 0 3.2 2.7c.3.1.5.1.7-.1l.5-.6c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.4.4.6Z"/></svg>
+            Book an appointment
+          </a>
+          <a class="btn btn-ghost" href="#treatments">See treatments</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat"><b>4.9</b><span>Rating on Google</span></div>
+        <div class="stat"><b>135</b><span>Patient reviews</span></div>
+        <div class="stat"><b>MD</b><span>Dermatology, Venereology &amp; Leprosy</span></div>
+        <div class="stat"><b>7 days</b><span>Open all week</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="treatments">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we treat</p>
+        <h2>Skin, hair and nails &mdash; diagnosed properly.</h2>
+        <p>Every plan begins with an actual diagnosis, not a product recommendation. Treatments are explained clearly before anything starts.</p>
+      </div>
+      <div class="treat">
+        <div class="treat-row">
+          <span class="num">01</span>
+          <h3>Acne &amp; acne scars</h3>
+          <p>Active breakouts, comedonal and hormonal acne, and post-acne marks. Medical management supported by peels and microneedling where indicated.</p>
+        </div>
+        <div class="treat-row">
+          <span class="num">02</span>
+          <h3>Pigmentation &amp; melasma</h3>
+          <p>Melasma, tanning, dark patches, uneven tone and hyperpigmentation, treated with prescription actives and gentle in-clinic protocols.</p>
+        </div>
+        <div class="treat-row">
+          <span class="num">03</span>
+          <h3>Hair fall, alopecia &amp; PRP</h3>
+          <p>Pattern hair loss, telogen effluvium, alopecia areata and dandruff. Includes scalp assessment, PRP and medically supervised regimens.</p>
+        </div>
+        <div class="treat-row">
+          <span class="num">04</span>
+          <h3>HydraFacial &amp; skin brightening</h3>
+          <p>HydraFacial, AquaFacial, glutathione and medi-facials &mdash; aesthetic treatments delivered under a dermatologist's supervision, not a salon's.</p>
+        </div>
+        <div class="treat-row">
+          <span class="num">05</span>
+          <h3>Psoriasis, eczema &amp; skin allergies</h3>
+          <p>Chronic and recurring conditions including dermatitis, psoriasis, contact allergy from cosmetics, itching and fungal infections.</p>
+        </div>
+        <div class="treat-row">
+          <span class="num">06</span>
+          <h3>Moles, warts &amp; minor procedures</h3>
+          <p>Mole and skin tag removal, wart treatment, keloids, stretch marks, nail disorders and skin biopsy when a diagnosis needs confirming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bleed">
+    <div class="wrap">
+      <figure>
+        <img src="img/clinic.jpeg" alt="Consultation room at Epidermcare Skin Clinic">
+      </figure>
+      <figcaption>Epidermcare Skin Clinic &amp; Wellness Centre &mdash; Pearl Classic, Sane Guruji Marg, Goregaon West.</figcaption>
+    </div>
+  </div>
+
+  <section id="doctor">
+    <div class="wrap">
+      <div class="doc">
+        <div>
+          <p class="eyebrow">The doctor</p>
+          <h2>Dr. Pooja Shrivastava</h2>
+          <p style="color:var(--ink-soft);font-size:17px;margin-top:20px">A dermatologist, venereologist and cosmetologist practising in Goregaon West. Patients consistently mention the same three things &mdash; punctual appointments, a treatment plan that is actually explained, and no pressure to buy packages.</p>
+          <ul class="cred">
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg> MBBS, MD &mdash; Dermatology, Venereology &amp; Leprosy</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg> 7+ years of clinical experience</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg> Special interest in acne and cosmetic dermatology</li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg> Rated 4.9 out of 5 by 135 patients on Google</li>
+          </ul>
+        </div>
+        <div class="doc-img">
+          <img src="img/care.jpeg" alt="Clinical skincare used in treatment plans at Epidermcare">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How to book</p>
+        <h2>Three steps, no phone tag.</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <b>STEP 01</b>
+          <h3>Send your details</h3>
+          <p>Fill the short form below. It reaches the clinic on WhatsApp instantly, with your concern and preferred time already written out.</p>
+        </div>
+        <div class="step">
+          <b>STEP 02</b>
+          <h3>Get a confirmed slot</h3>
+          <p>The clinic replies on the same WhatsApp chat with the nearest available appointment, usually within a couple of hours during clinic hours.</p>
+        </div>
+        <div class="step">
+          <b>STEP 03</b>
+          <h3>Come in and be seen</h3>
+          <p>Appointments are spaced so you are seen on time. You leave with a diagnosis and a clear treatment plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Patient reviews</p>
+        <h2>What patients say.</h2>
+      </div>
+      <div class="rev-grid">
+        <div class="rev">
+          <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg></div>
+          <p>I have been under treatment for comedonal acne with Dr Pooja. A couple of things I liked about the clinic were its punctuality, ease to make appointments, the way the problem and the treatment plan are explained by the doctor and availability of products prescribed. I have seen a significant improvement in my skin, it has become brighter naturally and the acne has been controlled. In my opinion, Dr Pooja is an expert when it comes to acne and other cosmetic procedures.</p>
+          <cite>&mdash; Ujwal Kashyap, verified patient review</cite>
+        </div>
+        <div class="rev rev-score">
+          <b>4.9</b>
+          <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg></div>
+          <span>Average rating from<br>135 patient reviews</span>
+          <a href="https://www.google.com/maps/dir//19.165118586265,72.840720713139" target="_blank" rel="noopener">Read them on Google &rarr;</a>
+        </div>
+        <div class="rev">
+          <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7-6.2-3.4L5.8 21 7 14.2 2 9.4l7-.9L12 2z"/></svg></div>
+          <p>Visited Dr. Pooja Shrivastava for acne and pimples treatment. I recommend the doctor.</p>
+          <cite>&mdash; Priya, verified patient review</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <div class="book-grid">
+        <div class="book-copy">
+          <p class="eyebrow">Book an appointment</p>
+          <h2>Takes about forty seconds.</h2>
+          <p>Fill this in and it opens WhatsApp with your details already written out. Send it, and the clinic confirms your slot.</p>
+          <div class="book-meta">
+            <div><b>Clinic hours</b><span>Open all seven days<br>10:00 am &ndash; 9:00 pm</span></div>
+            <div><b>Address</b><span>Pearl Classic, Ground Floor,<br>Sane Guruji Marg, Mahatma Gandhi Rd,<br>Motilal Nagar III, Goregaon West,<br>Mumbai 400104</span></div>
+            <div><b>Phone</b><span><a href="tel:+917400109577">+91 74001 09577</a></span></div>
+            <div><b>Getting here</b><span><a href="https://www.google.com/maps/dir//19.165118586265,72.840720713139" target="_blank" rel="noopener">Directions on Google Maps &rarr;</a></span></div>
+          </div>
+        </div>
+
+        <form id="bookForm" novalidate>
+          <div class="f-row">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Full name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="10-digit mobile" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="concern">What would you like help with?</label>
+            <select id="concern" name="concern" required>
+              <option value="">Select a concern</option>
+              <option>Acne or acne scars</option>
+              <option>Pigmentation or melasma</option>
+              <option>Hair fall, dandruff or alopecia</option>
+              <option>HydraFacial or skin brightening</option>
+              <option>Psoriasis, eczema or skin allergy</option>
+              <option>Mole, wart or skin tag removal</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="f-row">
+            <div class="field">
+              <label for="day">Preferred day</label>
+              <input id="day" name="day" type="date">
+            </div>
+            <div class="field">
+              <label for="slot">Preferred time</label>
+              <select id="slot" name="slot">
+                <option>Morning (10 am &ndash; 1 pm)</option>
+                <option>Afternoon (1 pm &ndash; 5 pm)</option>
+                <option>Evening (5 pm &ndash; 9 pm)</option>
+                <option>Any time works</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="notes">Anything else (optional)</label>
+            <textarea id="notes" name="notes" placeholder="How long you have had the concern, treatments already tried..."></textarea>
+          </div>
+          <button class="btn btn-dark" type="submit">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1a11.6 11.6 0 0 1-4.6-3.2 9 9 0 0 1-1.8-3c-.2-.6 0-1.2.3-1.6l.6-.7c.2-.2.5-.2.7.1l1 1.7c.1.3.1.5 0 .7l-.4.5c-.2.2-.2.4 0 .7a8 8 0 0 0 3.2 2.7c.3.1.5.1.7-.1l.5-.6c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.4.4.6Z"/></svg>
+            Send on WhatsApp
+          </button>
+          <p class="hint" id="formHint">No account needed. Your details are not stored on this website.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2>Before you come in.</h2>
+      </div>
+      <div>
+        <details open>
+          <summary>What does a consultation cost?</summary>
+          <p>A consultation is Rs. 800 and includes a full assessment of your concern. Any procedure is quoted separately and only after you have agreed to it &mdash; nothing is added without being discussed first.</p>
+        </details>
+        <details>
+          <summary>Do I need an appointment, or can I walk in?</summary>
+          <p>An appointment is strongly preferred so that you are not left waiting. Message the clinic on WhatsApp using the form above and you will get the nearest available slot. Walk-ins are accommodated when there is a gap.</p>
+        </details>
+        <details>
+          <summary>Where exactly is the clinic?</summary>
+          <p>Pearl Classic, Ground Floor, Sane Guruji Marg, off Mahatma Gandhi Road, Motilal Nagar III, Goregaon West, Mumbai 400104 &mdash; near Azad Maidan. Tap &ldquo;Directions on Google Maps&rdquo; above for turn-by-turn navigation.</p>
+        </details>
+        <details>
+          <summary>Are the treatments safe for Indian skin?</summary>
+          <p>Yes. Every protocol is selected for medium to deep skin tones and adjusted per patient after assessment. Because Dr. Pooja is a qualified dermatologist (MD, DVL), aesthetic treatments such as HydraFacial and PRP are performed under medical supervision rather than in a salon setting.</p>
+        </details>
+        <details>
+          <summary>How soon will I see results?</summary>
+          <p>It depends on the condition. Acne typically improves noticeably within 6&ndash;8 weeks, pigmentation within 8&ndash;12 weeks, and hair regrowth takes around 4&ndash;6 months. You will be given realistic timelines at your first visit rather than promises.</p>
+        </details>
+        <details>
+          <summary>Which days is the clinic open?</summary>
+          <p>The clinic is open all seven days of the week. If you are unsure whether the doctor is in on a particular day, send a WhatsApp message and the clinic will confirm before you travel.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">Epidermcare Skin Clinic &amp; Wellness Centre</p>
+        <p style="color:var(--ink-soft);margin-top:18px;max-width:34ch">Dermatology in Goregaon West, Mumbai.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Pearl Classic, Ground Floor,<br>Sane Guruji Marg,<br>Motilal Nagar III, Goregaon West,<br>Mumbai 400104</p>
+        <a href="https://www.google.com/maps/dir//19.165118586265,72.840720713139" target="_blank" rel="noopener">Get directions &rarr;</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+917400109577">+91 74001 09577</a>
+        <a href="#book">Book on WhatsApp</a>
+        <a href="https://www.instagram.com/epidermcareskinclinic/" target="_blank" rel="noopener">Instagram &rarr;</a>
+        <p style="color:var(--ink-soft)">Open all seven days</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Epidermcare Skin Clinic &amp; Wellness Centre.</span>
+      <span>Information here is general and not a substitute for a consultation.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#book" aria-label="Book on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .1-1.7-.1a11.6 11.6 0 0 1-4.6-3.2 9 9 0 0 1-1.8-3c-.2-.6 0-1.2.3-1.6l.6-.7c.2-.2.5-.2.7.1l1 1.7c.1.3.1.5 0 .7l-.4.5c-.2.2-.2.4 0 .7a8 8 0 0 0 3.2 2.7c.3.1.5.1.7-.1l.5-.6c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.4.4.6Z"/></svg>
+</a>
+
+<script>
+var CLINIC = {
+  name:     "Epidermcare Skin Clinic",
+  whatsapp: "917400109577",
+  mapsUrl:  "https://www.google.com/maps/dir//19.165118586265,72.840720713139"
+};
+
+var burger = document.getElementById("burger");
+var mnav = document.getElementById("mobileNav");
+burger.addEventListener("click", function () {
+  var open = mnav.style.display === "block";
+  mnav.style.display = open ? "none" : "block";
+  burger.setAttribute("aria-expanded", String(!open));
+});
+mnav.querySelectorAll("a").forEach(function (a) {
+  a.addEventListener("click", function () {
+    mnav.style.display = "none";
+    burger.setAttribute("aria-expanded", "false");
+  });
+});
+
+document.getElementById("day").min = new Date().toISOString().split("T")[0];
+
+var form = document.getElementById("bookForm");
+var hint = document.getElementById("formHint");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  var name = form.name.value.trim();
+  var phone = form.phone.value.trim();
+  var concern = form.concern.value;
+  var day = form.day.value;
+  var slot = form.slot.value;
+  var notes = form.notes.value.trim();
+
+  if (!name || !phone || !concern) {
+    hint.textContent = "Please add your name, phone number and concern.";
+    hint.style.color = "#E56458";
+    return;
+  }
+
+  var prettyDay = "Any day this week";
+  if (day) {
+    prettyDay = new Date(day + "T00:00:00").toLocaleDateString("en-IN", {
+      weekday: "long", day: "numeric", month: "long"
+    });
+  }
+
+  var lines = [
+    "Hello " + CLINIC.name + ", I would like to book an appointment.",
+    "",
+    "Name: " + name,
+    "Phone: " + phone,
+    "Concern: " + concern,
+    "Preferred day: " + prettyDay,
+    "Preferred time: " + slot
+  ];
+  if (notes) lines.push("Notes: " + notes);
+  lines.push("", "(Sent from the website)");
+
+  var url = "https://wa.me/" + CLINIC.whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
+  window.open(url, "_blank", "noopener");
+
+  hint.textContent = "Opening WhatsApp... press send in the chat to confirm.";
+  hint.style.color = "#46A171";
+});
+</script>
+</body>
+</html>
